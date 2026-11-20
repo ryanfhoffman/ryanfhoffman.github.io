@@ -3,23 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ryan Hoffman</title>
+  <title>Ryan F. Hoffman</title>
+  <meta name="description" content="Ryan F. Hoffman, founding engineer at Lightwave. Work, education, and selected projects.">
   <style>
     body {
-      margin: 0;
-      padding: 2rem;
-      font-family: system-ui, -apple-system, sans-serif;
-      color: #111;
-      background: #fff;
-    }
-    h1 {
-      margin: 0;
-      text-align: center;
+      max-width: 74ch;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.45;
     }
   </style>
 </head>
 <body>
-  <h1>Ryan Hoffman</h1>
-  <p>Welcome to my website.</p>
+  <main>
+    <h1>Ryan F. Hoffman</h1>
+    <p>I’m a founding engineer at Lightwave, where I work on making language models cheaper to run. I also make games and short films.</p>
+    <p>
+      <a href="mailto:ryanfhoffman@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/ryan-hoffman-789b8b127/">LinkedIn</a> ·
+      <a href="https://github.com/ryanfhoffman">GitHub</a>
+    </p>
+
+    <h2>Experience</h2>
+    <p><strong>Founding Engineer, <a href="https://lightwave.ai/team">Lightwave</a></strong><br>
+      September 2026 – present<br>
+      I work on ternary quantization. I test how much accuracy a trained language model retains when each weight is stored as −1, 0, or +1 with a shared scale factor.
+    </p>
+    <p><strong>Software Engineer, Appian</strong><br>
+      September 2025 – September 2026 · Tysons, Virginia<br>
+      I worked on the runtime and Kubernetes infrastructure that let customers publish Appian pages on the web. Appian Portals handled 35 million interactions a month across more than 500 customers. I also mentored four engineering interns.
+    </p>
+    <p><strong>Software Engineer Intern, Appian</strong><br>
+      June – August 2024 · Tysons, Virginia<br>
+      I built a Kubernetes cluster to evaluate Crossplane for managing AWS resources. That work informed Appian’s company-wide adoption of Crossplane. I also migrated production servers to a new Amazon Linux image with zero downtime. A tool I built to explain XGBoost predictions won Appian’s Indie-Time Showcase Award.
+    </p>
+    <p><strong>Software Engineer Intern, Kestra Medical Technologies</strong><br>
+      June – August 2023 · Kirkland, Washington<br>
+      I built a C++ and Qt desktop app that read heart-rate recordings from wearable defibrillators over USB and plotted them offline.
+    </p>
+
+    <h2>Education</h2>
+    <p><strong>Princeton University</strong>, 2021–2025<br>
+      A.B. in Computer Science, <i>cum laude</i>, with a certificate in Entrepreneurship. GPA 3.81.
+    </p>
+    <p>For my senior thesis with Adam Finkelstein, I built <a href="https://theses-dissertations.princeton.edu/handle/88435/dsp01jq085p46d">CATCA</a>,
+      an algorithm that speeds up audio by cutting low-energy segments first. I wanted to know whether choosing which sounds to cut could keep speech intelligible at higher playback speeds.
+    </p>
+
+    <h2>Selected projects</h2>
+    <ul>
+      <li><a href="https://github.com/niconee55/BracketMaker">BracketMaker</a>. I led a team of four building a tournament app for Princeton’s esports club. I wrote the Flask routes and PostgreSQL logic for player profiles, score reporting, and bracket updates.</li>
+      <li><a href="https://niconee55.github.io/Froggin/">Froggin’</a>. A browser game about jumping a frog from one lily pad to the next. I built the aiming guide that shows where a jump will land and the tongue that catches flies.</li>
+      <li><strong>P2P File Share.</strong> I built a Python and PyQt desktop app for streaming and annotating files. It used an Azure VM to help peers behind different routers connect over UDP.</li>
+    </ul>
+
+    <h2>Technical skills</h2>
+    <p>Python, Java, C, C++, JavaScript, and SQL. For machine learning I use PyTorch and NumPy. My infrastructure work has included AWS, Kubernetes, Helm, Terraform, and GitLab CI/CD.</p>
+
+    <h2>Outside of engineering</h2>
+    <p>At Princeton Pictures I wrote, directed, and edited <i>Rat Boys</i> and <i>Dorm Dinner</i>. I led a crew of more than 20, and more than 500 people attended the premieres.</p>
+    <p>I’ve fostered more than 70 kittens. I also used to speedrun <i>Destiny 2</i> and held a world number-one ranking in 2019.</p>
+  </main>
 </body>
 </html>
