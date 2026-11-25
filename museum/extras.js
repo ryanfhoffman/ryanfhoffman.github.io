@@ -56,14 +56,14 @@ export function createExtras(readyAgeMs) {
   const hint = document.createElement('div')
   hint.inert = true
   hint.setAttribute('aria-hidden', 'true')
-  hint.style.cssText = `position:fixed;left:18px;bottom:18px;z-index:2;opacity:0;
-    display:grid;gap:3px;pointer-events:none;user-select:none;color:#555;
-    font:600 18px/1 system-ui,sans-serif`
+  hint.style.cssText = `position:fixed;left:18px;bottom:18px;z-index:2;opacity:1;
+    display:grid;gap:5px;pointer-events:none;user-select:none;color:#333;
+    font:700 26px/1 system-ui,sans-serif`
   for (const letter of 'WASD') {
     const key = document.createElement('kbd')
     key.textContent = letter
-    key.style.cssText = `display:grid;place-items:center;width:32px;height:31px;font:inherit;
-      background:#f5f5f5;border:1px solid #aaa;border-bottom-width:2px;border-radius:4px`
+    key.style.cssText = `display:grid;place-items:center;box-sizing:border-box;width:48px;height:48px;font:inherit;
+      background:#f5f5f5;border:1px solid #888;border-bottom-width:3px;border-radius:6px`
     if (letter === 'W') key.style.gridArea = '1 / 2'
     else key.style.gridRow = '2'
     hint.append(key)
@@ -83,15 +83,14 @@ export function createExtras(readyAgeMs) {
   prompt.style.cssText = `position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
     z-index:2;pointer-events:none;user-select:none;color:#555;font:13px/1.4 system-ui,sans-serif`
 
-  const fadeStart = Math.max(3000, readyAgeMs)
   let revealed = false, paused = false, titleAge = 0
   let notesPlayed = 0, dampNote
   function restNote() { dampNote?.(false) }
   return {
     stepPage(ageMs) {
       if (revealed) return
-      const elapsed = Math.max(0, ageMs - fadeStart)
-      hint.style.opacity = 0.5 - 0.5 * Math.cos(2 * Math.PI * elapsed / 4200)
+      const elapsed = ageMs - readyAgeMs
+      hint.style.opacity = 0.9 + 0.1 * Math.cos(2 * Math.PI * elapsed / 4200)
     },
     reveal() {
       if (revealed) return
