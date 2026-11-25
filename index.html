@@ -63,5 +63,15 @@
     <p>At Princeton Pictures I wrote, directed, and edited <i>Rat Boys</i> and <i>Dorm Dinner</i>. I led a crew of more than 20, and more than 500 people attended the premieres.</p>
     <p>I’ve fostered more than 70 kittens. I also used to speedrun <i>Destiny 2</i> and held a world number-one ranking in 2019.</p>
   </main>
+  <script type="module">
+    const api = new URLSearchParams(location.search).has('harness') ? window.__museum = {} : null;
+    let ready;
+    if (api) api.ready = new Promise(resolve => { ready = resolve; });
+    if (matchMedia('(pointer: fine) and (hover: hover)').matches) {
+      requestAnimationFrame(() => import('./museum/engine.js').then(({ start }) => {
+        if (start(api)) ready?.();
+      }).catch(() => {}));
+    }
+  </script>
 </body>
 </html>
